@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:5000 wsgi:app
+worker: python3 app.py
