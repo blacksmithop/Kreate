@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kreate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% assets "scss_all" %}
+    <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+    {% endassets %}
+
+</head>
+<body>
+    <!doctype html>
+    <title>Kreate</title>
+    <div class="wrapper">
+        <div class="grid">
+          <h1>Kreate</h1>
+
+            <div class="grid__subtitle">
+            <p>Invert images online</p>
+            <span class="mask delay"></span>
+          </div>
+
+        </div>
+
+        <form method=post enctype=multipart/form-data>
+            <div class="file-upload">
+                <input type=file name=file>
+                <i class="fa fa-arrow-up"></i>
+            </div>
+            <input class="button" type=submit value=Upload>
+        </form>
+
+    </div>
+</body>
+</html>
