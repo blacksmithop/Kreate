@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Kreate</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +32,14 @@
             </div>
             <input class="button" type=submit value=Invert>
         </form>
-
+    {% with event = get_flashed_messages() %}
+    {% if event %}
+    <div class="event-label">
+        {{ event[0] }}
+    {% endif %}
     </div>
+    {% endwith %}
+
+   </div>
 </body>
 </html>

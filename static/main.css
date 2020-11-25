@@ -4,7 +4,7 @@
     box-sizing: border-box; }
 
     body {
-      font-family: Algerian;
+      font-family: Fantasy;
       background-color: #1880d9;
       height: 90%; }
 
@@ -25,8 +25,8 @@
             justify-content: center;
             text-align: center; }
             .wrapper .file-upload {
-              height: 200px;
-              width: 200px;
+              height: 150px;
+              width: 150px;
               border-radius: 100px;
               position: relative;
               display: flex;
@@ -135,3 +135,10 @@
   h1 {
     text-align: center;
     color: #fff; }
+
+    .event-label {
+      font-size: 30px;
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      top: 70%; }
