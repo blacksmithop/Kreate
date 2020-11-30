@@ -1,6 +1,7 @@
 from PIL import Image, ImageOps
 from flask import Flask, flash, request, redirect, render_template, send_file, url_for
 from werkzeug.utils import secure_filename
+from werkzeug.exceptions import HTTPException
 from flask_assets import Environment, Bundle
 from io import BytesIO, StringIO
 
@@ -50,6 +51,19 @@ def upload_file():
         else:
             flash(f"❓ Only files of the type {', '.join(ALLOWED_EXTENSIONS)} are allowed", 'warning')
     return render_template('index.html')
+
+
+@app.route('/facts')
+def type_facts():
+    return render_template('facts.html', value='there you go')
+
+
+@app.errorhandler(Exception)
+def handle_error(e):
+    code = 500
+    if isinstance(e, HTTPException):
+        code = e.code
+    return redirect(f'https://http.cat/{code}')
 
 
 @app.errorhandler(500)
